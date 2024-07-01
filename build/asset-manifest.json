@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9c5d3b0e.css",
+    "main.js": "/static/js/main.98f8f530.js",
+    "static/media/html-system-website-concept (1).jpg": "/static/media/html-system-website-concept (1).c654e16eafec04b3e3a7.jpg",
+    "static/media/digital-blue-hud-interface-laptop-concept.jpg": "/static/media/digital-blue-hud-interface-laptop-concept.3c5f00c32e71b75d8c5b.jpg",
+    "static/media/manwithai.jpg": "/static/media/manwithai.d1034a487e01de7ab3b6.jpg",
+    "static/media/computer-programmer-using-laptop.jpg": "/static/media/computer-programmer-using-laptop.025c872c5bc9d654baf1.jpg",
+    "static/media/img 2.jpeg": "/static/media/img 2.1f51f1f47bb9ac00ff69.jpeg",
+    "static/media/My-Resume.pdf": "/static/media/My-Resume.a8759a1534018c688e69.pdf",
+    "static/media/html.ico": "/static/media/html.5f6dcb30a2245db47187.ico",
+    "static/media/javascript.ico": "/static/media/javascript.340c08475b56373c9030.ico",
+    "static/media/react.ico": "/static/media/react.35a46603a89aded16742.ico",
+    "static/media/reactmet.ico": "/static/media/reactmet.41caab94749dca495291.ico",
+    "static/media/css.ico": "/static/media/css.20c4693f952ce51a8f80.ico",
+    "static/media/mongodb.ico": "/static/media/mongodb.ed379d13895d913f50a9.ico",
+    "static/media/java.ico": "/static/media/java.2bf5b3fa2b102db3a1ca.ico",
+    "static/media/github.ico": "/static/media/github.529db562619f9417767c.ico",
+    "static/media/nodejs.ico": "/static/media/nodejs.469f157ab1ff00d0bff0.ico",
+    "static/media/c.ico": "/static/media/c.a25f1740a0b4de8e6988.ico",
+    "static/media/bootstrap.ico": "/static/media/bootstrap.225e6b9280a94805009f.ico",
+    "index.html": "/index.html",
+    "main.9c5d3b0e.css.map": "/static/css/main.9c5d3b0e.css.map",
+    "main.98f8f530.js.map": "/static/js/main.98f8f530.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c5d3b0e.css",
+    "static/js/main.98f8f530.js"
+  ]
+}

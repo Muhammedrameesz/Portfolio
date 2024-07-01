@@ -7,6 +7,7 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
   
@@ -14,7 +15,13 @@ export default function Contact() {
 //   const handleClear=()=>{
 //     setName('') ;
 //   }
-  
+
+
+  const data =(data)=>{
+    console.log(data)
+    reset();
+    alert('Thank you for contacting me, I will get back to you as soon as possible')
+  }
 
   return (
     <>
@@ -52,7 +59,7 @@ export default function Contact() {
 
             <form 
              
-              onSubmit={handleSubmit((data) => console.log(data))} >
+              onSubmit={handleSubmit((data))} >
               <Stack spacing={2} sx={{
                 display: 'flex',
                 marginTop: '100px',
@@ -82,18 +89,25 @@ export default function Contact() {
                 {errors.FullName && <p style={{ color: "#fff", marginLeft: '20px' }}>Name is required.</p>}
 
                 {/* Textfield 2  */}
+
                 <TextField
-
-                  sx={{ input: { color: ('#fff') }, backgroundImage: 'url(https://img.freepik.com/free-photo/pile-colourful-abstract-paper-waves_23-2148319154.jpg?size=626&ext=jpg&uid=R121738979&ga=GA1.1.906489000.1700029812&semt=ais)' }} id="outlined-basic" label="Email" variant="outlined" {...register('Email', { required: true })} />
-                {errors.Email && <p style={{ color: "#fff", marginLeft: '20px' }}>Email is required.</p>}
-
+                  sx={{ input: { color: ('#fff') }, backgroundImage: 'url(https://img.freepik.com/free-photo/pile-colourful-abstract-paper-waves_23-2148319154.jpg?size=626&ext=jpg&uid=R121738979&ga=GA1.1.906489000.1700029812&semt=ais)' 
+                  }} 
+                  id="outlined-basic" label="Email" variant="outlined" 
+                  {...register('Email', { required: true , pattern: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/
+                  })} />
+                {errors.Email && errors.Email.type==="required" && ( <p style={{ color: "#fff", marginLeft: '20px' }}>Email is required.</p>)}
+                {errors.Email && errors.Email.type==="pattern" &&( <p style={{ color: "#fff", marginLeft: '20px' }}>Enter a valid email. </p>)}
                 {/* Textfield 3  */}
+
                 <TextField
-
-                  sx={{ input: { color: ('#fff') }, backgroundImage: 'url(https://img.freepik.com/free-photo/pile-colourful-abstract-paper-waves_23-2148319154.jpg?size=626&ext=jpg&uid=R121738979&ga=GA1.1.906489000.1700029812&semt=ais)' }} id="outlined-basic" label="Password" variant="outlined" {...register('Password', { required: true })} />
-                {errors.Password && <p style={{ color: "#fff", marginLeft: '20px' }}>password is required.</p>}
-
+                  sx={{ input: { color: ('#fff') }, backgroundImage: 'url(https://img.freepik.com/free-photo/pile-colourful-abstract-paper-waves_23-2148319154.jpg?size=626&ext=jpg&uid=R121738979&ga=GA1.1.906489000.1700029812&semt=ais)' 
+                  }} id="outlined-basic" label="Password" variant="outlined" 
+                  {...register('Password', { required: true,minLength:6 })} />
+                {errors.Password && errors.Password.type==="required" && ( <p style={{ color: "#fff", marginLeft: '20px' }}>password is required.</p>)}
+              {errors.Password && errors.Password.type==="minLength" && ( <p style={{ color: "#fff", marginLeft: '20px' }}>at-least 6 characters.</p>)}
                 {/* Textfield 4  */}
+
                 <TextField sx={{ backgroundImage: 'url(https://img.freepik.com/free-vector/digital-technology-background-with-abstract-wave-border_53876-117508.jpg?size=626&ext=jpg&uid=R121738979&ga=GA1.1.906489000.1700029812&semt=ais)' }}
                   id="outlined-multiline-static"
                   label="Messege"

@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Grid } from '@mui/material';
-import shadows from '@mui/material/styles/shadows';
+
 
 export default function ActionAreaCard() {
 const go=()=>{window.location.href ="https://muhammedrameesz.github.io/Chessboard/"}
